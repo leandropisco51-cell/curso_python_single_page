@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Curso Python - Leandro Pisco</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <style>
+        :root { --accent: #3b82f6; --bg: #0f172a; --card: #1e293b; --text: #f8fafc; }
+        body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; margin: 0; }
+        .nav-wrapper { position: sticky; top: 0; background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(10px); padding: 20px; border-bottom: 1px solid #334155; z-index: 1000; text-align: center; }
+        .nav-btn { background: var(--card); color: var(--text); border: 1px solid #475569; padding: 10px 15px; border-radius: 8px; text-decoration: none; margin: 5px; display: inline-block; transition: 0.3s; font-size: 0.9rem; }
+        .nav-btn:hover { background: var(--accent); border-color: var(--accent); }
+        .container { max-width: 800px; margin: 40px auto; }
+        section { scroll-margin-top: 150px; padding: 20px; background: var(--card); border-radius: 16px; margin-bottom: 30px; border: 1px solid #334155; }
+        pre { border-radius: 8px; font-size: 0.85em; padding: 10px; background: #2d2d2d; }
+        .code-example { margin-bottom: 15px; }
+        .desc { color: #9cdcfe; margin-bottom: 5px; display: block; font-size: 0.8rem; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="nav-wrapper">
+        <h1 style="margin:0 0 15px 0;">Professor: Leandro Pisco - Lógica Python</h1>
+        <a href="#if" class="nav-btn">If/Else</a>
+        <a href="#for" class="nav-btn">For</a>
+        <a href="#while" class="nav-btn">While</a>
+        <a href="#funcao" class="nav-btn">Função</a>
+    </div>
+
+    <div class="container">
+        <section id="if">
+            <h2>If / Else (10 exemplos)</h2>
+            <div class="code-example"><span class="desc">1. Simples</span><pre><code class="language-python">if x > 0:
+    print("Positivo")</code></pre></div>
+            <div class="code-example"><span class="desc">2. If-Else</span><pre><code class="language-python">if x > 0:
+    print("Ok")
+else:
+    print("Erro")</code></pre></div>
+            <div class="code-example"><span class="desc">3. Elif</span><pre><code class="language-python">if x > 10:
+    print("Grande")
+elif x > 5:
+    print("Médio")
+else:
+    print("Pequeno")</code></pre></div>
+            <div class="code-example"><span class="desc">4. Comparação</span><pre><code class="language-python">if x == 10:
+    print("Igual a 10")</code></pre></div>
+            <div class="code-example"><span class="desc">5. Diferença</span><pre><code class="language-python">if x != 0:
+    print("Não é zero")</code></pre></div>
+            <div class="code-example"><span class="desc">6. AND</span><pre><code class="language-python">if x > 0 and x < 10:
+    print("Entre 0 e 10")</code></pre></div>
+            <div class="code-example"><span class="desc">7. OR</span><pre><code class="language-python">if x == 1 or x == 2:
+    print("1 ou 2")</code></pre></div>
+            <div class="code-example"><span class="desc">8. In List</span><pre><code class="language-python">if x in [1, 2]:
+    print("Na lista")</code></pre></div>
+            <div class="code-example"><span class="desc">9. Not</span><pre><code class="language-python">if not x:
+    print("Vazio/Zero")</code></pre></div>
+            <div class="code-example"><span class="desc">10. isinstance</span><pre><code class="language-python">if isinstance(x, int):
+    print("Inteiro")</code></pre></div>
+        </section>
+
+        <section id="for">
+            <h2>For Loop (10 exemplos)</h2>
+            <div class="code-example"><span class="desc">1. Range</span><pre><code class="language-python">for i in range(5):
+    print(i)</code></pre></div>
+            <div class="code-example"><span class="desc">2. String</span><pre><code class="language-python">for c in "Py":
+    print(c)</code></pre></div>
+            <div class="code-example"><span class="desc">3. Lista</span><pre><code class="language-python">for n in [1, 2]:
+    print(n)</code></pre></div>
+            <div class="code-example"><span class="desc">4. Step</span><pre><code class="language-python">for i in range(0, 10, 2):
+    print(i)</code></pre></div>
+            <div class="code-example"><span class="desc">5. Reverse</span><pre><code class="language-python">for i in reversed(range(3)):
+    print(i)</code></pre></div>
+            <div class="code-example"><span class="desc">6. Enumerate</span><pre><code class="language-python">for i, v in enumerate(['a', 'b']):
+    print(i, v)</code></pre></div>
+            <div class="code-example"><span class="desc">7. Dict keys</span><pre><code class="language-python">for k in {'a': 1}:
+    print(k)</code></pre></div>
+            <div class="code-example"><span class="desc">8. Tuple</span><pre><code class="language-python">for v in (1, 2):
+    print(v)</code></pre></div>
+            <div class="code-example"><span class="desc">9. Zip</span><pre><code class="language-python">for a, b in zip([1], [2]):
+    print(a, b)</code></pre></div>
+            <div class="code-example"><span class="desc">10. List Comp</span><pre><code class="language-python">[x*2 for x in range(3)]</code></pre></div>
+        </section>
+
+        <section id="while">
+            <h2>While Loop (10 exemplos)</h2>
+            <div class="code-example"><span class="desc">1. Simples</span><pre><code class="language-python">while x > 0:
+    x -= 1</code></pre></div>
+            <div class="code-example"><span class="desc">2. Break</span><pre><code class="language-python">while True:
+    break</code></pre></div>
+            <div class="code-example"><span class="desc">3. Contagem</span><pre><code class="language-python">while x < 5:
+    x += 1</code></pre></div>
+            <div class="code-example"><span class="desc">4. Decremento</span><pre><code class="language-python">while x > 0:
+    x -= 1</code></pre></div>
+            <div class="code-example"><span class="desc">5. Flag</span><pre><code class="language-python">run = True
+while run:
+    run = False</code></pre></div>
+            <div class="code-example"><span class="desc">6. Pop list</span><pre><code class="language-python">while lista:
+    lista.pop()</code></pre></div>
+            <div class="code-example"><span class="desc">7. Cond OR</span><pre><code class="language-python">while x < 5 or y < 5:
+    x += 1</code></pre></div>
+            <div class="code-example"><span class="desc">8. Print</span><pre><code class="language-python">while x > 0:
+    print(x)
+    x -= 1</code></pre></div>
+            <div class="code-example"><span class="desc">9. Pass</span><pre><code class="language-python">while False:
+    pass</code></pre></div>
+            <div class="code-example"><span class="desc">10. Continue</span><pre><code class="language-python">while x > 0:
+    x -= 1
+    continue</code></pre></div>
+        </section>
+
+        <section id="funcao">
+            <h2>Funções (10 exemplos)</h2>
+            <div class="code-example"><span class="desc">1. Vazia</span><pre><code class="language-python">def f():
+    pass</code></pre></div>
+            <div class="code-example"><span class="desc">2. Retorno</span><pre><code class="language-python">def f():
+    return 1</code></pre></div>
+            <div class="code-example"><span class="desc">3. Argumento</span><pre><code class="language-python">def f(a):
+    return a</code></pre></div>
+            <div class="code-example"><span class="desc">4. Padrão</span><pre><code class="language-python">def f(a=1):
+    return a</code></pre></div>
+            <div class="code-example"><span class="desc">5. Lambda</span><pre><code class="language-python">f = lambda x: x * 2</code></pre></div>
+            <div class="code-example"><span class="desc">6. Docstring</span><pre><code class="language-python">def f():
+    """Doc"""</code></pre></div>
+            <div class="code-example"><span class="desc">7. Args</span><pre><code class="language-python">def f(*args):
+    pass</code></pre></div>
+            <div class="code-example"><span class="desc">8. Kwargs</span><pre><code class="language-python">def f(**kwargs):
+    pass</code></pre></div>
+            <div class="code-example"><span class="desc">9. Global</span><pre><code class="language-python">def f():
+    global x
+    x = 1</code></pre></div>
+            <div class="code-example"><span class="desc">10. TypeHint</span><pre><code class="language-python">def f(a: int) -> int:
+    return a</code></pre></div>
+        </section>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+</body>
+</html>
